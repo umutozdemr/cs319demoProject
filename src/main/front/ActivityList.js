@@ -17,12 +17,13 @@ const getData2 = () => {
             var ge250 = response.data[i].ge250Point;
             document.body.innerHTML = document.body.innerHTML + '<ul class="list-group list-group-horizontal mb-2 mt-4 "  >\n' +
                 '      <li class="list-group-item col-lg-2 col-sm-2 col-md-2 text-center  col-4" id="activityClub1" style="border: none"> </li>\n' +
-                '      <li class="list-group-item col-lg-2 col-sm-2 col-md-2 text-center  col-4" style="border: none"><span id="activityName1"> '+ activityName+ ' </span></li>\n' +
-                '      <li class="list-group-item col-lg-2 col-sm-2 col-md-2 d-none d-sm-block text-center  col-2" style="border: none"><span id="activityDate1"> '+ activitydate+ ' </span></li>\n' +
-                '      <li class="list-group-item col-lg-2 col-sm-2 col-md-2 d-none d-sm-block text-center  col-2" style="border: none"><span id="activityPlace1"> '+ activityplace+ ' </span></li>\n' +
-                '      <li class="list-group-item col-lg-1 col-sm-1 col-md-1 d-none d-sm-block text-center  col-1" style="border: none"><span id="activityQuota1"> '+ accap+ '</span></li>\n' +
-                '      <li class="list-group-item col-lg-1 col-sm-1 col-md-1 d-none d-sm-block text-center  col-1" style="border: none"><span id="activityGe1"> '+ ge250+ ' </span></li>';
+                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityName1"> '+ activityName+ ' </span></li>\n' +
+                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityDate1"> '+ activitydate+ ' </span></li>\n' +
+                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityPlace1"> '+ activityplace+ ' </span></li>\n' +
+                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityQuota1"> '+ accap+ '</span></li>\n' +
+                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityGe1"> '+ ge250+ ' </span></li>';
 
+                //club name not included
         }
     })
     .catch(function (error) {

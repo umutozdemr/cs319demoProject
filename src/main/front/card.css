@@ -40,11 +40,11 @@
       0 0 5px #fff,
       0 0 10px #fff,
       0 0 20px #fff,
-      0 0 40px #001489,
-      0 0 80px #001489,
-      0 0 90px #001489,
-      0 0 100px #001489,
-      0 0 150px #001489;
+      0 0 40px #5868c4,
+      0 0 80px #5868c4,
+      0 0 90px #5868c4,
+      0 0 100px #5868c4,
+      0 0 150px #5868c4;
   }
 
   .neon2 {
@@ -53,12 +53,12 @@
     font-weight: 400;
     color: rgb(169, 203, 247);
     text-shadow:
-      0 0 5px #001489,
-      0 0 10px #001489,
-      0 0 20px #001489,
-      0 0 40px #001489,
-      0 0 80px #001489,
-      0 0 90px #001489;
+      0 0 5px #5868c4,
+      0 0 10px #5868c4,
+      0 0 20px #5868c4,
+      0 0 40px #5868c4,
+      0 0 80px #5868c4,
+      0 0 90px #5868c4;
      
   }
 
@@ -82,13 +82,13 @@
     background: rgb(255, 255, 255);
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #032db9;
+    border: 2px solid #5868c4;
     outline: none;
     color: rgb(17, 2, 2);
     border-radius: 24px;
     padding: 14px 10px;
-    width:75%;
-    margin-top:5px;
+    width:35%;
+    margin-top:5%;
     font-size:15px;
     padding:8px;
     transition: 0.30s;
@@ -96,6 +96,6 @@
   }
 
   .button-activity:hover {
-    background: rgb(113, 247, 124);
+    background: rgb(144, 200, 226);
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 8px 25px 0 rgba(0,0,0,0.19);
   }
