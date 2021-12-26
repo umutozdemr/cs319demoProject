@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="textarea.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./src/bootstrap-input-spinner.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="ClubPage.js" defer></script>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .imagePreview {
+            width: 100%;
+            height: 250px;
+
+            background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+            background-color: whitesmoke;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            display: block;
+            border-radius: 0px;
+            box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
+            margin-top: -5px;
+        }
+
+        .imgUp {
+            margin-bottom: 20px;
+        }
+
+        .del {
+            position: absolute;
+            top: 0px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgba(255, 0, 0, 0.6);
+            cursor: pointer;
+        }
+
+        .imgAdd {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #4bd7ef;
+            color: #fff;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            line-height: 30px;
+            margin-top: 0px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .button-go {
+            border: 0;
+            background: rgb(154, 248, 240);
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #032db9;
+            outline: none;
+            color: rgb(17, 2, 2);
+            border-radius: 24px;
+            padding: 14px 10px;
+            width: 75%;
+            margin-top: 5px;
+            font-size: 15px;
+            padding: 8px;
+            transition: 0.30s;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button-go:hover {
+            width: 100%;
+            box-shadow: 0 12px 16px 0 #1abc9c, 0 17px 50px 0 #56fcdb;
+            background: white;
+            border: 3px solid #29a2f3;
+            color: rgb(240, 251, 255);
+        }
+
+        .button-delete {
+            border: 0;
+            background: rgb(255, 134, 134);
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #b90303;
+            outline: none;
+            color: rgb(17, 2, 2);
+            border-radius: 24px;
+            padding: 14px 10px;
+            width: 75%;
+            margin-top: 5px;
+            font-size: 15px;
+            padding: 8px;
+            transition: 0.30s;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button-delete:hover {
+            width: 100%;
+            box-shadow: 0 12px 16px 0 #e93e3e, 0 17px 50px 0 #e93e3e;
+            background: #e93e3e;
+            border: 3px solid #e93e3e;
+            color: ivory;
+        }
+    </style>
+</head>
+
+<body style="background-color: white;">
+    <nav>
+        <a href="ClubManagerMainPage.html">Main Page</a>
+        <a href="ClubMembersPage.html">club members</a>
+        <a href="ActivityList.html">activity list</a>
+        <a href="ClubPage.html">club page</a>
+        <a href="LoginStudent.html" class="logout">log out</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="imgUp" style="text-align: center;">
+                    <div class="imagePreview"></div>
+                    <label class="button-go">
+                        Upload<input type="file" class="uploadFile img" value="Upload Photo"
+                            style= "width: 0px;height: 0px;overflow: hidden;">
+                    </label>
+                </div><!-- col-2 -->
+            </div>
+            <div class="col-md-4">
+            </div>
+
+        </div>
+        <div class="row ">
+            <div class="col-md-6">
+                <label style="color: black;" class="labels">Club Description</label>
+                <div class="textarea_style">
+                    <textarea style="background-color: white;" class="textarea" id="clubDescription" rows="6" column="37" maxlength="500" minlength="1"
+                        placeholder="Write your description here..."></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label style="color: black;" class="labels">Mission</label>
+                <div class="textarea_style">
+                    <textarea style="background-color: white;" class="textarea" id="mission" rows="6" column="37" maxlength="500" minlength="1"
+                        placeholder="Write your description here..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-6">
+                <label style="color: black;" class="labels">Vision</label>
+                <div class="textarea_style">
+                    <textarea style="background-color: white;" class="textarea" id="vision" rows="6" column="37" maxlength="500" minlength="1"
+                        placeholder="Write your description here..."></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label style="color: black;" class="labels">Past Activities</label>
+                <div class="textarea_style">
+                    <textarea style="background-color: white;" class="textarea" id="pastActivities" rows="6" column="37" maxlength="500" minlength="1"
+                        placeholder="Write your description here..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row " style="margin-top: 5%;">
+        <div class="col">
+
+        </div>
+        <div class="col" style="text-align: center;">
+            <button class="button-go" id = "saveButtonClubPage">SAVE</button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(document).on("change", ".uploadFile", function () {
+                var uploadFile = $(this);
+                var files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+                if (/^image/.test(files[0].type)) { // only image file
+                    var reader = new FileReader(); // instance of the FileReader
+                    reader.readAsDataURL(files[0]); // read the local file
+
+                    reader.onloadend = function () { // set image data as background of div
+                        //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
+                        uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url(" + this.result + ")");
+                    }
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
