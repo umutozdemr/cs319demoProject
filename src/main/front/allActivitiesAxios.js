@@ -19,9 +19,9 @@ const getData = () => {
                 '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityName1"> '+ activityName+ ' </span></li>\n' +
                 '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityDate1"> '+ activitydate+ ' </span></li>\n' +
                 '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityPlace1"> '+ activityplace+ ' </span></li>\n' +
-                '      <li class="list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityQuota1"> '+ accap+ '</span></li>\n' +
-                '      <li class="list-list-group-item  col-lg-2 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityGe1"> '+ ge250+ ' </span></li>\n' +
-                '      <li class="list-group-item col-lg-2 col-2 justify-content-center d-none  d-sm-block" style="border: none">\n' +
+                '      <li class="list-group-item  col-lg-1 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityQuota1"> '+ accap+ '</span></li>\n' +
+                '      <li class="list-group-item  col-lg-1 col-sm-2 col-md-2 col-4 text-center" style="border: none"><span id="activityGe1"> '+ ge250+ ' </span></li>\n' +
+                '      <li class="list-group-item col-lg-1 col-2 justify-content-center d-none  d-sm-block" style="border: none">\n' +
                 '        <button id = "joinButton" type="button" class="btn btn-danger btn-outline-dark justify-content-center" style="color: white">Join</button>\n' +
                 '      </li>';
 
